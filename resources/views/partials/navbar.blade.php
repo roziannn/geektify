@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
     <div class="container">
-        <a class="navbar-brand m-1 fs-3" href="#"><i class="ri-code-box-line"></i> Geektify</a>
+        <a class="navbar-brand m-1 fs-3" href="/"><i class="ri-code-box-line"></i> Geektify</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
             aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="/login">Login</a>
                     </li>
                 </ul>
             </div>
@@ -40,13 +40,14 @@
 
 <style>
     .nav-link {
-        margin: 12px;
+        margin: 16px;
     }
 
     .nav-item:hover {
         background-color: rgb(70, 70, 70);
         color: #fff;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
 </style>
