@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'login');
+    Route::post('/login', 'authenticate');
+    Route::post('/logout', 'logout');
     Route::get('/register', 'register');
     Route::get('/forgot-password', 'forgot');
 });
+
+// bentrok routing
+Route::controller(UserController::class)->group(function () {
+    Route::post('/register', 'store');
+});
+
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index');
 });

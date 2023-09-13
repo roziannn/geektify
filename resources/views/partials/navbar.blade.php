@@ -28,10 +28,22 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Kategori</a>
                     </li>
+                    @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Halo, {{ auth()->user()->name }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button class="nav-link" type="submit">Logout</button>
+                            </form>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Login</a>
-                    </li>
+                    @endauth
                 </ul>
             </div>
         </div>
@@ -43,11 +55,10 @@
         margin: 16px;
     }
 
-    .nav-item:hover {
+    /* .nav-item:hover {
         background-color: rgb(70, 70, 70);
         color: #fff;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-    }
-
+    } */
 </style>
