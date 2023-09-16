@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DiscussionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 
@@ -26,9 +27,13 @@ Route::controller(LoginController::class)->group(function () {
     Route::get('/forgot-password', 'forgot');
 });
 
-// bentrok routing
 Route::controller(UserController::class)->group(function () {
     Route::post('/register', 'store');
+});
+
+Route::controller(DiscussionController::class)->group(function () {
+    Route::get('/diskusi', 'index');
+    Route::get('/tambah-diskusi', 'create');
 });
 
 Route::controller(HomeController::class)->group(function () {

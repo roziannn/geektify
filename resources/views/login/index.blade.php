@@ -8,7 +8,7 @@
         @if (session()->has('loginError'))
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 {{ session('loginError') }}
-                <button type="button" class="close" data-bs-dismiss="alert" aria-hidden="true">&times;</button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-hidden="true"></button>
             </div>
         @endif
 
@@ -16,7 +16,7 @@
             @csrf
             <div class="form-group my-4">
                 <label for="email">Email</label>
-                <input type="email" name="email" class="form-control " id="email" required="" autofocus=""
+                <input type="email" name="email" class="form-control " id="email" required="" au tofocus=""
                     value="">
             </div>
             <div class="form-group my-4">

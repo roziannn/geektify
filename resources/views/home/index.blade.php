@@ -8,7 +8,11 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+
+    @auth
+        
     <h2>Selamat Siang, {{ auth()->user()->name }}</h2>
+    @endauth
     <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum dolorem esse non similique. Architecto ab magni at
     </h3>
 @endsection
